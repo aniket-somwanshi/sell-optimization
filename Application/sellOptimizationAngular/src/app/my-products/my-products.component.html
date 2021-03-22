@@ -1,0 +1,166 @@
+<section class="navi">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <img src="assets/ebay.png" width="200px" height="55px"> 
+        &nbsp;&nbsp;&nbsp;
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="nav navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Categories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Daily Deals</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Sell on Ebay</a>
+            </li>
+          </ul>
+
+
+          <ul class="nav navbar-nav navbar-right ml-auto" style="float:right">
+            <!-- <button [routerLink]="['/my-products']" class="button"> My products</button> -->
+
+          </ul>
+        </div>
+      </nav>
+
+
+
+</section>
+
+<section class="content">
+    <div class="row">
+        <div class="col-md-2" >
+            <div class="sidebar" style="font-size: 17px; font-weight: 300;">
+                <div style=" font-size: 25px; font-weight: 600;">
+                    Categories
+                </div>
+                
+                <br>
+                <span style="text-decoration: underline; font-weight: 600;">Electronics</span><br>
+                &nbsp; &nbsp;<span>TVs</span><br>
+                &nbsp; &nbsp;<span>Refrigerators</span><br>
+                &nbsp; &nbsp;<span>Air Conditioners</span><br>
+                &nbsp; &nbsp;<span>Computers</span><br>
+                
+                <span style="text-decoration: underline; font-weight: 600;">Motors & Vehicles</span><br>
+                &nbsp; &nbsp;<span>Bikes</span><br>
+                &nbsp; &nbsp;<span>4 wheelers</span><br>
+                &nbsp; &nbsp;<span>Vintage Collection</span><br>
+                &nbsp; &nbsp;<span>Boats </span><br>
+                
+                <span style="text-decoration: underline; font-weight: 600;">Fashionware</span><br>
+                &nbsp; &nbsp;<span>Clothing</span><br>
+                &nbsp; &nbsp;<span>Accessories</span><br>
+                &nbsp; &nbsp;<span>Jewellery</span><br>
+                
+                <span style="text-decoration: underline; font-weight: 600;">Collectibles</span><br>
+                &nbsp; &nbsp;<span>Sports cards</span><br>
+                &nbsp; &nbsp;<span>Vintage Watches</span><br>
+                &nbsp; &nbsp;<span>Memorabilia</span><br>
+                &nbsp; &nbsp;<span>Rare Coins</span><br>
+
+                <span style="text-decoration: underline; font-weight: 600;">Home & Garden</span><br>
+                <span style="text-decoration: underline; font-weight: 600;">Sports goods</span><br>
+
+         
+            </div>
+        </div>
+        <div class="col-md-10">
+            <div style="padding-right: 20px;">
+
+            <div class="products">
+
+                <div style="padding: 0px 20px;">
+                    <span  style="text-decoration: underline; font-weight: 600; font-size: 26px;">Purchase History</span>
+                
+                    <div style="float: right;">
+                        <span>Current year: </span>
+                        <input [(ngModel)]="date" type="date" style="padding: 6px;" value="2015-01-01">
+                        &nbsp;&nbsp;&nbsp;
+                        <button class="button" (click) = "generate()">Generate Sell Optimization</button>
+                    </div>
+                </div>
+
+
+
+
+                <div [ngClass]="{'green-bg': showOptimizations && p.month==-1, 
+                'red-bg':showOptimizations && p.month!=-1}" class="product" *ngFor="let p of myProducts">
+                    <hr>
+                    <div style="padding: 5px 0px;" class="row" >
+                      
+                    
+                    <div class="col-md-4">
+                        <img height="280px" width="100%" src={{p.image}}>
+                    </div>
+                    <div class="col-md-8">
+                        <div><span style="font-size: 23px; font-weight: 700;">{{p.name}}</span></div>
+                        <div  class="stars" style="font-size: 20px;">
+                            <span class="fa fa-star checked" *ngIf="p.average_rating >=1"></span>
+                            <span class="fa fa-star" *ngIf="p.average_rating < 1"></span>
+        
+                            <span class="fa fa-star checked" *ngIf="p.average_rating >=2"></span>
+                            <span class="fa fa-star" *ngIf="p.average_rating <2"></span>
+                            
+                            <span class="fa fa-star" *ngIf="p.average_rating <3"></span>
+                            <span class="fa fa-star checked" *ngIf="p.average_rating >=3"></span>
+        
+                            <span class="fa fa-star checked" *ngIf="p.average_rating >=4"></span>
+                            <span class="fa fa-star" *ngIf="p.average_rating <4"></span>
+        
+                            <span class="fa fa-star checked" *ngIf="p.average_rating >=5"></span>
+                            <span class="fa fa-star" *ngIf="p.average_rating < 5"></span>
+
+                            &nbsp;&nbsp;<span style="color:#3665f3; font-size: 17px;"> {{p.total_ratings}} product ratings </span>
+                        </div> 
+
+                        <div class="desc" style="font-size: 17px; color: #767676;">
+                            <span>{{p.desc}}</span>
+                        </div>
+                        
+
+                        <div class="price">
+
+                                    <span></span>
+                                    <span style="font-size: 25px; font-weight: 600;">${{p.price}}</span>
+                                
+                                    <span style="color: #767676; font-style: italic;">({{p.condition}} years old) </span>
+
+                        </div>
+                        
+                        <div >
+                            <!-- <button (click)="openVerticallyCentered(content, p.average_rating, p.condition,p.desc,p.id,p.image,p.name,p.price,p.total_ratings,p.type)">Buy now</button> -->
+                            <button
+                             [ngClass]="{'green-button': p.month==-1, 'red-button': p.month!=-1}"
+                             *ngIf="showOptimizations">
+                              <i [ngClass]="{'green-color': p.month==-1, 'red-color': p.month!=-1}" class="fa fa-circle"></i>
+                                &nbsp;&nbsp;
+                              <span *ngIf="p.month==-1" >Wait until Next Year</span>
+                              <span *ngIf="p.month!=-1">Selling opportunity in {{months[p.month]}}</span>
+                                    </button>
+                        </div>
+
+                    </div>
+                </div>
+                
+                </div>
+</div>
+            <div style="padding:20px 10px;">
+                <button class="button" (click)="deletePurchaseHistory()">Clear purchase history</button>
+            </div>
+
+            </div>
+        </div>
+    </div>
+
+   
+</section>
+
+<section class="footer"></section>
+

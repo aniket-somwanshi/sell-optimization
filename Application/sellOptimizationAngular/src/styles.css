@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Barlow&display=swap');
+
+body{
+    font-family: 'Inter', sans-serif !important;
+    /* font-weight: 500; */
+}
+.products{
+    border: 1px solid lightgrey;
+    padding: 20px 0px;
+}
+.checked {
+    color: rgb(255, 183, 1) !important;
+  }
+  .fa-star{
+    color: #767676;
+
+  }
+.sidebar{
+    height: 100%;
+    padding: 20px;
+    
+}
+/* .navi{
+    padding-top: 20px;
+    padding-right: 100px;
+    height: 60px;
+} */
+.product{
+    margin-bottom: 10px;
+    font-size: 17px;
+    padding: 0px 20px;
+}
+.product img{
+    padding: 10px;
+    border: 0.5px lightgrey solid;
+}
+.buy button{
+    border:1px solid #3665F3;
+    background-color:transparent;
+    color:#3665F3;
+    padding: 8px 20px; 
+    /* border-radius: 20px; */
+}
+.product div{
+    margin-bottom: 5px;
+}
+.modal-content{
+    border-radius:0px !important;
+}
+
+.button{
+    display: inline-block;
+    
+    border:1px solid #3665F3;
+    background-color:transparent;
+    color:#3665F3;
+    padding: 8px 20px; 
+    /* border-radius: 20px; */
+}
+
+
+.green-bg{
+    background: rgb(234, 255, 234);
+}
+.red-bg{
+    background:rgb(255, 238, 238);
+}
+.green-color{
+    color: #0cd71d;
+}
+.red-color{
+    color:#ee3818;
+}
+
+.green-button{
+    display: inline-block;
+    
+    border:1px solid #0cd71d;
+    background-color:transparent;
+    color:#0cd71d;
+    padding: 8px 20px; 
+    /* border-radius: 20px; */
+}
+.red-button{
+    display: inline-block;
+    
+    /* border:1px solid #1cd02b; */
+    border:1px solid #ee3818;
+    background-color:transparent;
+    color:#ee3818;
+    padding: 8px 20px; 
+
+    /* border-radius: 20px; */
+}
