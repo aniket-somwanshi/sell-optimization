@@ -1,7 +1,11 @@
 
 
 # Sell Optimization
-## 1. Introduction to use case
+
+## 1. Working demo 
+[![Watch the video](https://github.com/aniket-somwanshi/sell-optimization/blob/master/Resources/thumbnail_exp.png)](https://youtu.be/Cs3Y_mZ34iE?t=123)
+
+## 2. Introduction to use case
 
 [![Watch the video](https://github.com/aniket-somwanshi/sell-optimization/blob/master/Resources/thumbnail_intro.png)](https://www.youtube.com/watch?v=PZDPq7UBMY8)
 
@@ -19,7 +23,7 @@ Optimization**. Users are informed about the Optimal year
 and month to sell a particular pre-owned product, so as to
 maximise possible profit & to retain the C2C community.
 
-## 2. Approach to Solution
+## 3. Approach to Solution
 
 [![Watch the video](https://github.com/aniket-somwanshi/sell-optimization/blob/master/Resources/thumbnail_exp.png)](https://www.youtube.com/watch?v=Cs3Y_mZ34iE)
 Consider the current year to be 2019. The general trend
@@ -40,10 +44,6 @@ time over a stretch of a period rather than instantaneously.
 The data for the given problem is a time-series of sales up
 until current year. 2 feeder models (LSTM) for optimal_year
 and optimal_month forecasting, are fed to the algorithm.
-
-## 3. Working demo 
-
-[![Watch the video](https://github.com/aniket-somwanshi/sell-optimization/blob/master/Resources/thumbnail_exp.png)](https://youtu.be/Cs3Y_mZ34iE?t=123)
 
 
 ## 4. High Level Architecture
