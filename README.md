@@ -41,10 +41,15 @@ The data for the given problem is a time-series of sales up
 until current year. 2 feeder models (LSTM) for optimal_year
 and optimal_month forecasting, are fed to the algorithm.
 
-## 3. High Level Architecture
+## 3. Working demo 
+
+[![Watch the video](https://github.com/aniket-somwanshi/sell-optimization/blob/master/Resources/thumbnail_exp.png)](https://youtu.be/Cs3Y_mZ34iE?t=123)
+
+
+## 4. High Level Architecture
 ![Architecture](https://github.com/aniket-somwanshi/sell-optimization/blob/master/Resources/so_architecture.png)
 
-## 4. User Interface
+## 5. User Interface
 ![UI](https://github.com/aniket-somwanshi/sell-optimization/blob/master/Resources/ui_so_6.png)
 
 
